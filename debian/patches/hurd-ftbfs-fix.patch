@@ -1,0 +1,15 @@
+--- a/openpgm/pgm/configure.ac
++++ b/openpgm/pgm/configure.ac
+@@ -219,7 +219,11 @@ AC_MSG_CHECKING([for struct group_req.gr
+ AC_COMPILE_IFELSE(
+ 	[AC_LANG_PROGRAM([[#include <netinet/in.h>]],
+ 		[[struct group_req gr;
+-gr.gr_interface = 0;]])],
++gr.gr_interface = 0;
++#ifndef MCAST_JOIN_GROUP
++# error no mcast
++#endif
++]])],
+ 	[AC_MSG_RESULT([yes])
+ 		CFLAGS="$CFLAGS -DHAVE_STRUCT_GROUP_REQ"],
+ 	[AC_MSG_RESULT([no])])

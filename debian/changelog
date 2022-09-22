@@ -1,0 +1,134 @@
+libpgm (5.3.128~dfsg-2) unstable; urgency=medium
+
+  * Upload to unstable for library transition.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 10 Oct 2020 18:00:12 +0200
+
+libpgm (5.3.128~dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Library transition from libpgm-5.2-0 to libpgm-5.3-0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 03 Sep 2020 17:33:48 +0200
+
+libpgm (5.2.122+git20200619~dfsg-2) unstable; urgency=medium
+
+  * Make pgm_family_string() inline (closes: #968642).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 19 Aug 2020 20:36:48 +0200
+
+libpgm (5.2.122+git20200619~dfsg-1) unstable; urgency=medium
+
+  * Git snapshot release:
+    - update for Python 3 (closes: #967165).
+  * Update patches.
+  * Update libpgm-5.2-0 symbols.
+  * Update Standards-Version to 4.5.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 17 Aug 2020 19:48:27 +0200
+
+libpgm (5.2.122~dfsg-3) unstable; urgency=medium
+
+  * Update watch file.
+  * Update debhelper level to 11:
+    - remove dh-autoreconf build dependency,
+    - don't specify parallel to debhelper.
+  * Update Standards-Version to 4.3.0:
+    - remove libpgm-dbg package and use the auto-generated one.
+
+  [ Luca Boccassi <bluca@debian.org> ]
+  * pkg-config: do not add -I to non-existing directory (closes: #920259).
+  * version_generator.py: make build reproducible (closes: #920271).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 24 Jan 2019 18:34:08 +0000
+
+libpgm (5.2.122~dfsg-2) unstable; urgency=low
+
+  * Upload to unstable for library transition (closes: #696491).
+  * Update upstream source location and watch file.
+  * Update Standards-Version to 3.9.7 .
+
+  [ Jérémy Bobbio <lunar@debian.org> ]
+  * Allow one to override the recorded build time (closes: #814832).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 20 Feb 2016 19:47:51 +0100
+
+libpgm (5.2.122~dfsg-1) experimental; urgency=low
+
+  * New upstream release.
+  * Multi-Arch the package (closes: #674610).
+  * Change library name and update its symbols.
+  * Update packaging and enable parallel build.
+
+  [ Ricardo Salveti de Araujo <ricardo.salveti@canonical.com> ]
+  * force-running-benchmark-in-case-tsc_mhz-returns-0.patch:
+    - Force running benchmark in case /proc/cpuinfo returns 0 as cpu MHz
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 29 Jan 2015 18:14:56 +0000
+
+libpgm (5.1.118-1~dfsg-2) unstable; urgency=medium
+
+  * Correct libpgm-5.1.so broken symlink (closes: #775367).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 17 Jan 2015 18:41:48 +0000
+
+libpgm (5.1.118-1~dfsg-1) unstable; urgency=medium
+
+  * Apply Hurd FTBFS fix (closes: #747237).
+  * Empty dependency_libs.
+  * Update Standards-Version to 3.9.6 and debhelper level to 9 .
+  * Update watch file.
+  * New maintainer (closes: #761246).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 20 Oct 2014 19:41:43 +0000
+
+libpgm (5.1.118-1~dfsg-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload. 
+  * Use dh-autoreconf to regenerate autoconf and libtool scripts
+    (Closes: #752010, #759462).
+
+ -- Aurelien Jarno <aurel32@debian.org>  Thu, 11 Sep 2014 23:20:14 +0200
+
+libpgm (5.1.118-1~dfsg-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Imported Upstream version 5.1.118-1~dfsg (Closes: #645758)
+  * Drop patches included in upstream.
+  * Do not bootstrap while build as upstream ships configure.
+
+ -- Kefu Chai <tchaikov@gmail.com>  Sun, 29 Apr 2012 13:07:51 +0800
+
+libpgm (5.1.116~dfsg-2) unstable; urgency=low
+
+  * Rebuild with an updated symbols file for non-linux kernels.
+  * Conflict libpgm-dev with libnetpbm9-dev. This package has
+    been deprecated since 2003 and a replacement, libnetpbm10-dev,
+    exists (Closes: #624511).
+
+ -- Gabriel de Perthuis <g2p.code+debian@gmail.com>  Fri, 29 Apr 2011 19:23:03 +0200
+
+libpgm (5.1.116~dfsg-1) unstable; urgency=low
+
+  * Imported Upstream version 5.1.116~dfsg
+  * Initial release to Debian (Closes: #566126)
+
+ -- Gabriel de Perthuis <g2p.code+debian@gmail.com>  Thu, 07 Apr 2011 16:48:52 +0200
+
+libpgm (5.1.115~dfsg-1) unstable; urgency=low
+
+  * Imported Upstream version 5.1.115~dfsg
+
+ -- Gabriel de Perthuis <g2p.code+debian@gmail.com>  Thu, 07 Apr 2011 11:45:51 +0200
+
+libpgm (5.1.114~dfsg-1) unstable; urgency=low
+
+  * Imported Upstream version 5.1.114~dfsg
+
+ -- Gabriel de Perthuis <g2p.code@gmail.com>  Mon, 28 Mar 2011 12:35:51 +0200
+
+libpgm (5.1.102-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Steven McCoy <steven.mccoy@miru.hk>  Wed, 19 Jan 2011 14:17:08 +0800

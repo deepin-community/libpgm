@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+override_dh_clean:
+	dh_clean
+	# ignore generated files
+	rm -f openpgm/pgm/version.c \
+              openpgm/pgm/galois_tables.c
+	rm -rf openpgm/pgm/autom4te.cache
+
+override_dh_install:
+	dh_install
+	find debian/libpgm-dev/usr/lib  -name "*.la" -exec \
+		sed -i -e "s,^dependency_libs=.*,dependency_libs=''," {} +
+	dh_link -plibpgm-dev \
+		/usr/lib/$(DEB_HOST_MULTIARCH)/libpgm-5.3.so.0.0.128 /usr/lib/$(DEB_HOST_MULTIARCH)/libpgm-5.3.so
+
+%:
+	dh $@ --sourcedirectory=openpgm/pgm
+
+.PHONY: override_dh_clean override_dh_install
