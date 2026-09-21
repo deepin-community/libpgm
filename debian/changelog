@@ -1,3 +1,9 @@
+libpgm (5.3.128~dfsg-2deepin1) unstable; urgency=medium
+
+  * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
+
+ -- tunaichao <tunaichao@uniontech.com>  Mon, 21 Sep 2026 15:30:44 +0800
+
 libpgm (5.3.128~dfsg-2) unstable; urgency=medium
 
   * Upload to unstable for library transition.
